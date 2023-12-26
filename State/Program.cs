@@ -1,2 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using State;
+
+CandyMachine candyMachine = new(5);
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+
+candyMachine.InsertQuarter();
+candyMachine.EjectQuarter();
+Console.WriteLine();
+
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+
+candyMachine.InsertQuarter();
+candyMachine.TurnCrank();
+
+Console.WriteLine($"Осталось конфет: {candyMachine.CandyLeft}");
